@@ -1,5 +1,5 @@
 GET http://localhost:1234/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkN1c0lkMTIzNCIsImZpcnN0TmFtZSI6IkN1cyIsImxhc3ROYW1lIjoiRW1layIsImVtYWlsIjoiY3VzQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiQ3VzXzEyMzQiLCJpYXQiOjE2MjYzMTAwNTh9.tREdda6HZDsoThtSW1oKRi4YN5otSqA5m5YKE_8qEu4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFJZDEyMzQiLCJmaXJzdE5hbWUiOiJuYW1lXzEiLCJsYXN0TmFtZSI6ImxOYW1lXzEiLCJlbWFpbCI6InVzZXJfMUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjFQYXNzXzEyMzQiLCJpYXQiOjE2MjYzMTUyOTB9.Oax4zAfDmio5vINp9UGR7znpPAAFMG6WoBDikrIU8v0
 
 ###
 
@@ -7,8 +7,8 @@ POST http://localhost:1234/login
 Content-Type: application/json
 
 {
-    "email": "cus@gmail.com",
-    "password": "Cus_1234"
+    "email": "user_1@gmail.com",
+    "password": "1Pass_1234"
 }
 
 ### 
@@ -25,16 +25,17 @@ Content-Type: application/json
 
 ### 
 
-GET http://localhost:1234/chatlist
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkN1c0lkMTIzNCIsImZpcnN0TmFtZSI6IkN1cyIsImxhc3ROYW1lIjoiRW1layIsImVtYWlsIjoiY3VzQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiQ3VzXzEyMzQiLCJpYXQiOjE2MjYzMTAwNTh9.tREdda6HZDsoThtSW1oKRi4YN5otSqA5m5YKE_8qEu4
+GET http://localhost:1234/contacts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFJZDEyMzQiLCJmaXJzdE5hbWUiOiJuYW1lXzEiLCJsYXN0TmFtZSI6ImxOYW1lXzEiLCJlbWFpbCI6InVzZXJfMUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjFQYXNzXzEyMzQiLCJpYXQiOjE2MjYzMTUyOTB9.Oax4zAfDmio5vINp9UGR7znpPAAFMG6WoBDikrIU8v0
 
 ###
 
+# Not Working right now
 POST http://localhost:1234/chat
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkN1c0lkMTIzNCIsImZpcnN0TmFtZSI6IkN1cyIsImxhc3ROYW1lIjoiRW1layIsImVtYWlsIjoiY3VzQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiQ3VzXzEyMzQiLCJpYXQiOjE2MjYzMTAwNTh9.tREdda6HZDsoThtSW1oKRi4YN5otSqA5m5YKE_8qEu4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFJZDEyMzQiLCJmaXJzdE5hbWUiOiJuYW1lXzEiLCJsYXN0TmFtZSI6ImxOYW1lXzEiLCJlbWFpbCI6InVzZXJfMUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjFQYXNzXzEyMzQiLCJpYXQiOjE2MjYzMTUyOTB9.Oax4zAfDmio5vINp9UGR7znpPAAFMG6WoBDikrIU8v0
 
 Content-Type: application/json
 
 {
-    "chatId": "MeirId1234_CusId1234"
+    "chatId": "1Id1234_2Id1234"
 }

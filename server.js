@@ -60,18 +60,16 @@ app.get('/contacts', authenticationToken, (req, res) => {
     res.json(contacts)
 })
 
+
+// Not working TODO: need to check how to pass authentication with json in poset request
 app.post('/chat', authenticationToken, (req, res) => {
-    console.log("u em: " + req.email + ". ch id: " + req.chatId)
     const userEmail = req.email
     const chat = Chats.forEach(item => {
-        console.log("it id: " + item.chatId + ". re id: " + req.chatId)
         if(item.chatId === req.chatId) {
-            console.log("Found item: " + item)
             return item;
         }
     })
     if(chat === null) return res.sendStatus(401)
-    console.log(chat.firstChatting + " " + chat.secondCatting + " " + userEmail)
     if(chat.firstChatting !== userEmail && chat.secondCatting !== userEmail) return res.sendStatus(403)
 
     res.json(chat)
