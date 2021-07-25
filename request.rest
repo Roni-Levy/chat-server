@@ -1,5 +1,5 @@
 GET http://localhost:1234/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFJZDEyMzQiLCJmaXJzdE5hbWUiOiJuYW1lXzEiLCJsYXN0TmFtZSI6ImxOYW1lXzEiLCJlbWFpbCI6InVzZXJfMUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjFQYXNzXzEyMzQiLCJpYXQiOjE2MjYzMTUyOTB9.Oax4zAfDmio5vINp9UGR7znpPAAFMG6WoBDikrIU8v0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFJZDEyMzQiLCJmaXJzdE5hbWUiOiJuYW1lXzEiLCJsYXN0TmFtZSI6ImxOYW1lXzEiLCJlbWFpbCI6InVzZXJfMUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjFQYXNzXzEyMzQiLCJpYXQiOjE2MjYzNzIyOTR9.yqyqnKmDxpem1c0t41LFZ2uh7kFsI87ly1BEPIqeIn0
 
 ###
 
@@ -39,3 +39,8 @@ Content-Type: application/json
 {
     "chatId": "1Id1234_2Id1234"
 }
+
+
+###
+
+GET https://localhost:4321/baboo

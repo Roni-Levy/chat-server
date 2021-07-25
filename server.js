@@ -1,8 +1,18 @@
 require('dotenv').config()
 
 const express = require('express')
+const fs = require('fs')
+const https = require('https')
+const path = require('path')
 
 const app = express()
+
+const cors = require('cors')
+
+app.use(cors({
+        origin: "*",
+    })
+)
 
 const jwt = require('jsonwebtoken')
 
@@ -13,10 +23,12 @@ let Users = createUsers()
 let Chats = createHardCodedChats();
 
 app.get('/users', authenticationToken, (req, res) => {
-    res.json(Users.filter(user => user.email === req.email))
+    console.log("accepted request to get user")
+    res.json(Users.filter(user => user.email === req.email)[0])
 })
 
 app.post('/register', (req, res) => {
+    console.log('accepted request to register')
     let user = Users.filter(elm => elm.email === req.body.email)[0]
 
     if(user) return res.sendStatus(401)
@@ -36,6 +48,7 @@ app.post('/register', (req, res) => {
 })
 
 app.post('/login', (req, res) => {
+    console.log('accepted request to login')
     const user = Users.filter(elm => elm.email === req.body.email)[0]
 
     if(!user) return res.sendStatus(401)
@@ -47,6 +60,7 @@ app.post('/login', (req, res) => {
 })
 
 app.get('/contacts', authenticationToken, (req, res) => {
+    console.log('accepted request for contacts')
     const userEmail = req.email
     let contacts = []
     Chats.filter(chat => chat.firstChatting === userEmail || chat.secondCatting === userEmail).forEach(chat => {
