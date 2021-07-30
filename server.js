@@ -150,7 +150,7 @@ function createHardCodedMessages(firstChatting, secondCatting) {
 
         let newMessage = {
             sender: i % 2 === 0? firstChatting: secondCatting,
-            seningTime: time.getTime() + i * FIVE_MINUTE_IN_MILLISECONDS,
+            sendingTime: time.getTime() + (i * FIVE_MINUTE_IN_MILLISECONDS),
             message: "Whats up?",
             readMessageStatus: "read",
         }
